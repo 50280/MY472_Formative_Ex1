@@ -1,0 +1,63 @@
+---
+title: '01_data_transformation'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# Setting echo to TRUE such that the code is shown in the knitted document. 
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# Loading required packages
+library(rmarkdown)
+
+```
+
+
+### Loading the Iris Dataset and defining a function
+The aim of this function is to remove any missing data that may be present in the dataset. 
+
+```{r}
+
+# Defining a function with a single argument called data, that takes the dataset 
+# and performs some input transformation on it. 
+
+# Loading the built-in iris dataset in R.
+data(iris)
+
+# Creating a function that removes any rows that have missing values values in them. 
+remove_nas <- function(data) {
+  clean_data <- na.omit(data)
+    return(clean_data)
+}
+
+remove_nas(iris)
+
+
+```
+
+### Code used to create GitHub repository
+The code below is not set to run, it is solely present for informative purposes 
+about the commands that were used to create this repository. 
+
+```{bash, eval = FALSE}
+# Due to the eval = FALSE argument, this code will not be run when knitting the document. 
+# It is solely informative for the purposes of this assessment.
+
+# Setting the working directory. 
+cd ls 
+cd Desktop/Local
+
+# Using the link that is accessible on the Repository page, after creating a new repository online. 
+git clone https://github.com/50280/MY472_Formative_Ex1.git
+
+# Creating a new RMarkdown file using the touch function
+# Named this 01_data_transformation. If the workflow were to be continued, 
+# this title format would allow to keep files in order. 
+touch 01_data_transformation.rmd
+
+# Checking that the file was implemented as intended. 
+ls 
+
+```
