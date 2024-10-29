@@ -41,9 +41,9 @@ remove_nas(iris)
 
 # Creating a function that creates a new column called Sepal.Area, which 
 # multiplies their length and width. 
-sepal_area <- function(data) {
+sepal_area <- function(data_new) {
   data$Sepal.Area <- data$Sepal.Width * data$Sepal.Length
-    return(data)
+    return(data_new)
 }
 
 # Applying this function to the iris dataset. 
