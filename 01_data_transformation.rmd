@@ -8,13 +8,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
-# Loading required packages
-library(rmarkdown)
-
-```
-
-
 ### Loading the Iris Dataset and defining a function
 The aim of this function is to remove any missing data that may be present in the dataset. 
 
@@ -34,8 +27,25 @@ remove_nas <- function(data) {
 
 remove_nas(iris)
 
+```
+
+### Second function initially created in the dev branch
+```{r}
+
+# Creating a function that creates a new column called Sepal.Area, which 
+# multiplies their length and width. 
+sepal_area <- function(data_new) {
+  data_new$Sepal.Area <- data_new$Sepal.Width * data_new$Sepal.Length
+    return(data_new)
+}
+
+# Applying this function to the iris dataset. 
+transformed_data <- sepal_area(iris)
+
+head(transformed_data)
 
 ```
+
 
 ### Code used to create GitHub repository
 The code below is not set to run, it is solely present for informative purposes 
