@@ -46,6 +46,7 @@ sepal_area <- function(data) {
     return(data)
 }
 
+# Applying this function to the iris dataset. 
 transformed_data <- sepal_area(iris)
 
 head(transformed_data)
