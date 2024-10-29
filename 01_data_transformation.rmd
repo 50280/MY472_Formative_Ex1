@@ -53,7 +53,6 @@ head(transformed_data)
 ```
 
 
-
 ### Code used to create GitHub repository
 The code below is not set to run, it is solely present for informative purposes 
 about the commands that were used to create this repository. 
