@@ -42,7 +42,7 @@ remove_nas(iris)
 # Creating a function that creates a new column called Sepal.Area, which 
 # multiplies their length and width. 
 sepal_area <- function(data_new) {
-  data$Sepal.Area <- data$Sepal.Width * data$Sepal.Length
+  data_new$Sepal.Area <- data_new$Sepal.Width * data_new$Sepal.Length
     return(data_new)
 }
 
