@@ -8,13 +8,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
-# Loading required packages
-library(rmarkdown)
-
-```
-
-
 ### Loading the Iris Dataset and defining a function
 The aim of this function is to remove any missing data that may be present in the dataset. 
 

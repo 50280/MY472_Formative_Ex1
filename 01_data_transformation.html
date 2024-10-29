@@ -353,9 +353,6 @@ display: none;
 </div>
 
 
-<pre class="r"><code># Loading required packages
-library(rmarkdown)</code></pre>
-<pre><code>## Warning: package &#39;rmarkdown&#39; was built under R version 4.3.3</code></pre>
 <div id="loading-the-iris-dataset-and-defining-a-function" class="section level3">
 <h3>Loading the Iris Dataset and defining a function</h3>
 <p>The aim of this function is to remove any missing data that may be
@@ -524,6 +521,27 @@ remove_nas(iris)</code></pre>
 ## 148          6.5         3.0          5.2         2.0  virginica
 ## 149          6.2         3.4          5.4         2.3  virginica
 ## 150          5.9         3.0          5.1         1.8  virginica</code></pre>
+</div>
+<div id="second-function-initially-created-in-the-dev-branch" class="section level3">
+<h3>Second function initially created in the dev branch</h3>
+<pre class="r"><code># Creating a function that creates a new column called Sepal.Area, which 
+# multiplies their length and width. 
+sepal_area &lt;- function(data_new) {
+  data_new$Sepal.Area &lt;- data_new$Sepal.Width * data_new$Sepal.Length
+    return(data_new)
+}
+
+# Applying this function to the iris dataset. 
+transformed_data &lt;- sepal_area(iris)
+
+head(transformed_data)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.Area
+## 1          5.1         3.5          1.4         0.2  setosa      17.85
+## 2          4.9         3.0          1.4         0.2  setosa      14.70
+## 3          4.7         3.2          1.3         0.2  setosa      15.04
+## 4          4.6         3.1          1.5         0.2  setosa      14.26
+## 5          5.0         3.6          1.4         0.2  setosa      18.00
+## 6          5.4         3.9          1.7         0.4  setosa      21.06</code></pre>
 </div>
 <div id="code-used-to-create-github-repository" class="section level3">
 <h3>Code used to create GitHub repository</h3>
