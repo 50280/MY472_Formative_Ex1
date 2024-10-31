@@ -13,11 +13,11 @@ Email address: a.student@lse.ac.uk
 Phone: + 44 1234 567890
 Time Zone: GMT
 
-# Data:
+## Data:
 The data used in this repository stem from the built-in R Iris dataset. 
 
-# Codebook of functions in this repository: 
-• remove_nas: This function removes any rows that have missing values values in them.
+## Codebook of functions in this repository: 
+• remove_nas: This function removes any rows that have missing values values in them.  
 • sepal_area: This computes the sepal area by multiplying the sepal width by the length of each sepal.
 
 
